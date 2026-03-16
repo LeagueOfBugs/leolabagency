@@ -1,0 +1,56 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "cart",
+  "version": "1.0.0",
+  "description": "Full e-commerce cart with Zustand state, Supabase backend, and pluggable payment adapter",
+  "npmDependencies": {
+    "zustand": "^4.4.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "envVars": [
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_URL",
+      "description": "Your Supabase project URL (e.g. https://xxxx.supabase.co)",
+      "required": true
+    },
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "description": "Your Supabase anonymous/public key",
+      "required": true
+    },
+    {
+      "key": "SUPABASE_SERVICE_ROLE_KEY",
+      "description": "Your Supabase service role key (server-side API routes only)",
+      "required": true
+    }
+  ],
+  "moduleDependencies": [
+    { "name": "ui-button", "version": "1.0.0" }
+  ],
+  "files": [
+    "types/index.ts",
+    "lib/cart-store.ts",
+    "lib/payment-adapter.ts",
+    "lib/supabase-client.ts",
+    "hooks/useCart.ts",
+    "components/CartProvider.tsx",
+    "components/CartDrawer.tsx",
+    "components/CartItem.tsx",
+    "components/AddToCartButton.tsx",
+    "components/CartSummary.tsx",
+    "components/CheckoutForm.tsx",
+    "api/create-order.ts",
+    "api/products.ts",
+    "api/webhooks/payment.ts",
+    "supabase/migrations/001_cart_schema.sql"
+  ],
+  "installPaths": {
+    "api/create-order.ts": "app/api/cart/create-order/route.ts",
+    "api/products.ts": "app/api/cart/products/route.ts",
+    "api/webhooks/payment.ts": "app/api/webhooks/payment/route.ts",
+    "supabase/migrations/001_cart_schema.sql": "supabase/migrations/001_cart_schema.sql"
+  }
+}
