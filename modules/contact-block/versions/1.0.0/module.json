@@ -1,0 +1,14 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "contact-block",
+  "version": "1.0.0",
+  "description": "Contact section with address, hours table, phone, email, and optional Google Maps embed",
+  "npmDependencies": {},
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "types/index.ts",
+    "components/ContactBlock.tsx"
+  ],
+  "installPaths": {}
+}

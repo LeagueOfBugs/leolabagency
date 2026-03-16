@@ -1,0 +1,15 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "testimonials",
+  "version": "1.0.0",
+  "description": "Responsive testimonials section with star ratings and optional avatars",
+  "npmDependencies": {},
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "types/index.ts",
+    "components/TestimonialCard.tsx",
+    "components/TestimonialsSection.tsx"
+  ],
+  "installPaths": {}
+}

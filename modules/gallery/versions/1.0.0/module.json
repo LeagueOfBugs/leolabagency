@@ -1,0 +1,15 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "Responsive image gallery with optional before/after toggle on each item",
+  "npmDependencies": {},
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "types/index.ts",
+    "components/GalleryItem.tsx",
+    "components/GalleryGrid.tsx"
+  ],
+  "installPaths": {}
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "whatsapp-button",
+  "version": "1.0.0",
+  "description": "Fixed floating WhatsApp click-to-chat button",
+  "npmDependencies": {},
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "components/WhatsAppButton.tsx"
+  ],
+  "installPaths": {}
+}

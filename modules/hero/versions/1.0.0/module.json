@@ -1,0 +1,14 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "hero",
+  "version": "1.0.0",
+  "description": "Configurable hero section with headline, subheadline, CTAs, trust badges, and background variants",
+  "npmDependencies": {},
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "types/index.ts",
+    "components/Hero.tsx"
+  ],
+  "installPaths": {}
+}

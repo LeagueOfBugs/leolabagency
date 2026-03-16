@@ -22,6 +22,48 @@
       "latestVersion": "1.0.0",
       "versions": ["1.0.0"],
       "tags": ["booking", "appointments", "supabase", "email"]
+    },
+    {
+      "name": "hero",
+      "description": "Configurable hero section with headline, subheadline, CTAs, trust badges, and background variants",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "layout"]
+    },
+    {
+      "name": "whatsapp-button",
+      "description": "Fixed floating WhatsApp click-to-chat button",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "contact"]
+    },
+    {
+      "name": "testimonials",
+      "description": "Responsive testimonials section with star ratings and optional avatars",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "social-proof"]
+    },
+    {
+      "name": "pricing-table",
+      "description": "Grouped service pricing table with optional notes and footer disclaimer",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "pricing"]
+    },
+    {
+      "name": "contact-block",
+      "description": "Contact section with address, hours, phone, email, and optional Google Maps embed",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "contact"]
+    },
+    {
+      "name": "gallery",
+      "description": "Responsive image gallery with optional before/after toggle on each item",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "media"]
     }
   ]
 }

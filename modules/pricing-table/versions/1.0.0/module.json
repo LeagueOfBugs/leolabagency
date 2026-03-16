@@ -1,0 +1,15 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "pricing-table",
+  "version": "1.0.0",
+  "description": "Grouped service pricing table with optional notes and a footer disclaimer",
+  "npmDependencies": {},
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "types/index.ts",
+    "components/PricingTable.tsx",
+    "components/PricingSection.tsx"
+  ],
+  "installPaths": {}
+}
