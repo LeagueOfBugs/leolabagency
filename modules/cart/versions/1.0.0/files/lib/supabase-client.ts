@@ -9,8 +9,9 @@
 import { createClient } from "@supabase/supabase-js";
 
 // ─── Type helpers ─────────────────────────────────────────────────────────
+// Matches the format required by @supabase/supabase-js v2.50+
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
       products: {
@@ -25,13 +26,29 @@ export interface Database {
           created_at: string;
           updated_at: string;
         };
-        Insert: Omit<
-          Database["public"]["Tables"]["products"]["Row"],
-          "id" | "created_at" | "updated_at"
-        >;
-        Update: Partial<
-          Database["public"]["Tables"]["products"]["Insert"]
-        >;
+        Insert: {
+          id?: string;
+          name: string;
+          price_cents: number;
+          slug: string;
+          inventory?: number | null;
+          active?: boolean;
+          metadata?: Record<string, unknown>;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          name?: string;
+          price_cents?: number;
+          slug?: string;
+          inventory?: number | null;
+          active?: boolean;
+          metadata?: Record<string, unknown>;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
       };
       orders: {
         Row: {
@@ -47,13 +64,33 @@ export interface Database {
           created_at: string;
           updated_at: string;
         };
-        Insert: Omit<
-          Database["public"]["Tables"]["orders"]["Row"],
-          "id" | "created_at" | "updated_at"
-        >;
-        Update: Partial<
-          Database["public"]["Tables"]["orders"]["Insert"]
-        >;
+        Insert: {
+          id?: string;
+          status?: string;
+          customer_name: string;
+          customer_email: string;
+          customer_phone?: string | null;
+          shipping_address?: Record<string, unknown> | null;
+          total_cents: number;
+          payment_provider?: string;
+          payment_intent_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          status?: string;
+          customer_name?: string;
+          customer_email?: string;
+          customer_phone?: string | null;
+          shipping_address?: Record<string, unknown> | null;
+          total_cents?: number;
+          payment_provider?: string;
+          payment_intent_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
       };
       order_items: {
         Row: {
@@ -64,17 +101,31 @@ export interface Database {
           unit_price_cents: number;
           product_name: string;
         };
-        Insert: Omit<
-          Database["public"]["Tables"]["order_items"]["Row"],
-          "id"
-        >;
-        Update: Partial<
-          Database["public"]["Tables"]["order_items"]["Insert"]
-        >;
+        Insert: {
+          id?: string;
+          order_id: string;
+          product_id: string;
+          quantity: number;
+          unit_price_cents: number;
+          product_name: string;
+        };
+        Update: {
+          id?: string;
+          order_id?: string;
+          product_id?: string;
+          quantity?: number;
+          unit_price_cents?: number;
+          product_name?: string;
+        };
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
-}
+};
 
 // ─── Browser client (singleton) ──────────────────────────────────────────
 

@@ -7,10 +7,10 @@
  */
 
 import { useCartStore } from "../lib/cart-store";
-import type { Product } from "../types";
+import type { CartItem, Product } from "../types";
 
 export interface UseCartReturn {
-  items: ReturnType<typeof useCartStore>["items"];
+  items: CartItem[];
   isOpen: boolean;
 
   // Mutations

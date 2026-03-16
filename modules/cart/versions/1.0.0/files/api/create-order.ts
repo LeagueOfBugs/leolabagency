@@ -123,7 +123,7 @@ export async function POST(req: NextRequest) {
       customer_name: body.customer.name,
       customer_email: body.customer.email,
       customer_phone: body.customer.phone ?? null,
-      shipping_address: body.customer.address ?? null,
+      shipping_address: (body.customer.address ?? null) as Record<string, unknown> | null,
       total_cents: totalCents,
       payment_provider: adapter.name,
       payment_intent_id: paymentResult.paymentIntentId ?? null,
