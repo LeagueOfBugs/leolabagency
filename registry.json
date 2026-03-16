@@ -15,6 +15,13 @@
       "latestVersion": "1.0.0",
       "versions": ["1.0.0"],
       "tags": ["ecommerce", "cart", "supabase"]
+    },
+    {
+      "name": "booking",
+      "description": "Appointment booking form with Supabase backend and email confirmation via Resend",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["booking", "appointments", "supabase", "email"]
     }
   ]
 }

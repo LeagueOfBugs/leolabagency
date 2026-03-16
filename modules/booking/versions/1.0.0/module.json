@@ -1,0 +1,57 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "booking",
+  "version": "1.0.0",
+  "description": "Appointment booking form with Supabase backend and email confirmation via Resend",
+  "npmDependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "resend": "^3.0.0"
+  },
+  "envVars": [
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_URL",
+      "description": "Your Supabase project URL",
+      "required": true
+    },
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "description": "Your Supabase anonymous/public key",
+      "required": true
+    },
+    {
+      "key": "SUPABASE_SERVICE_ROLE_KEY",
+      "description": "Your Supabase service role key (server-side only)",
+      "required": true
+    },
+    {
+      "key": "RESEND_API_KEY",
+      "description": "Resend API key for sending confirmation emails (resend.com)",
+      "required": true
+    },
+    {
+      "key": "BOOKING_NOTIFICATION_EMAIL",
+      "description": "Email address that receives new appointment notifications (e.g. owner@yourbusiness.com)",
+      "required": true
+    },
+    {
+      "key": "RESEND_FROM_EMAIL",
+      "description": "The from address for outgoing emails (e.g. bookings@yourdomain.com). Must be verified in Resend.",
+      "required": true
+    }
+  ],
+  "moduleDependencies": [],
+  "files": [
+    "types/index.ts",
+    "lib/supabase-client.ts",
+    "lib/email.ts",
+    "components/BookingForm.tsx",
+    "components/BookingSuccess.tsx",
+    "components/BookingWidget.tsx",
+    "api/appointments.ts",
+    "supabase/migrations/001_booking_schema.sql"
+  ],
+  "installPaths": {
+    "api/appointments.ts": "app/api/booking/appointments/route.ts",
+    "supabase/migrations/001_booking_schema.sql": "supabase/migrations/002_booking_schema.sql"
+  }
+}
