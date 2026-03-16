@@ -1,0 +1,20 @@
+{
+  "$schema": "https://leolabagency.dev/registry.schema.json",
+  "version": "1",
+  "modules": [
+    {
+      "name": "ui-button",
+      "description": "Accessible, variant-driven button component built with CVA and Tailwind",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ui", "primitive"]
+    },
+    {
+      "name": "cart",
+      "description": "Full e-commerce cart with Zustand state, Supabase backend, and pluggable payment adapter",
+      "latestVersion": "1.0.0",
+      "versions": ["1.0.0"],
+      "tags": ["ecommerce", "cart", "supabase"]
+    }
+  ]
+}

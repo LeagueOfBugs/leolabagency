@@ -1,0 +1,17 @@
+{
+  "$schema": "https://leolabagency.dev/module.schema.json",
+  "name": "ui-button",
+  "version": "1.0.0",
+  "description": "Accessible, variant-driven button component built with CVA and Tailwind",
+  "npmDependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "envVars": [],
+  "moduleDependencies": [],
+  "files": [
+    "components/Button.tsx"
+  ],
+  "installPaths": {}
+}
